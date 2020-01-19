@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* body{
+    background-image: url(D:\Project\Women-Empowerment2\src\assets\one.jpg);
+} */
+
+nav a.active {
+    color: white;
+    font-size: 20px;
+    
+}
