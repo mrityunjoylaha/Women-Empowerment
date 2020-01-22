@@ -1,0 +1,464 @@
+Sequence for Step_Credential:
+--------------------------
+Create Sequence seq_stepId
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+_____________________________________________________
+Query for Register on clicking STEP
+------------------------------------
+Create table Step_Register
+(
+	Id number(5) Constraint User_Cendential_Id_PK Primary Key,
+	Name  Varchar2(50) Not Null, 
+	Username Varchar(10) Unique,
+	DOB date,
+	Password Varchar(16) Not Null,
+	CPassword Varchar(16) Not Null,
+	Contact Number(10) unique
+);
+______________________________________________________________
+Query to insert values:
+---------------------
+Insert into Step_Register(Id,Name,Username ,DOB ,Password ,CPassword ,Contact )
+values(seq_stepId.nextval,'SmitaMaity','Smita123',to_date('09-05-1996','DD-MM-YYYY'),'Crystalcoin1996','Crystalcoin1996','7327034895');
+
+Insert into Step_Register(Id,Name,Username ,DOB ,Password ,CPassword ,Contact )
+values(seq_stepId.nextval,'ChristalLobo','christallobo',to_date('18-03-1998','DD-MM-YYYY'),'christal1998','christal1998','9663925025');
+
+Insert into Step_Register(Id,Name,Username ,DOB ,Password ,CPassword ,Contact )
+values(seq_stepId.nextval,'Mrityunjoy','Joy97',to_date('10-04-1997','DD-MM-YYYY'),'joy1097','joy1097','9856367527');
+
+Insert into Step_Register(Id,Name,Username ,DOB ,Password ,CPassword ,Contact )
+values(seq_stepId.nextval,'Akshatha','Ak123',to_date('02-03-1997','DD-MM-YYYY'),'ak6748','ak6748','7352781689');
+_______________________________________________________________
+
+Query to select the Login Details
+----------------------------------
+
+Select Name 
+from Step_Register
+where Username='Smita123' and 
+Password='Crystalcoin1996';
+
+
+
+-----------------------------------------------------------------
+STEP
+------
+Create Sequence seq_perso
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table Step_Perso_Details
+(
+	PID number(5) Constraint Step_Perso_Details_PID_PK Primary Key,
+        Full_name  Varchar2(50) Not Null,
+	DOB Date,
+	Blood_Group Varchar2(3),
+	Address Varchar2(100),
+	Occupation Varchar2(20),
+	Marital_status Varchar2(20),
+	Salary Number(10,2),
+	Contact Number(10) unique,
+	Email Varchar2(50) unique
+	);
+
+Insert into Step_Perso_Details(PID, Full_name, DOB, Blood_Group, Address, Occupation, Marital_status,Salary, Contact, Email)
+values(seq_perso.nextval,'Smita Maity',to_date('09-05-1996','DD-MM-YYYY'),'B+','Jharkhand','Self-Employed', 'Single',24000, 7327034895, 'smitam996@gmail.com');
+
+Insert into Step_Perso_Details(PID, Full_name, DOB, Blood_Group, Address, Occupation, Marital_status,Salary, Contact, Email)
+values(seq_perso.nextval,'Christal Lobo',to_date('02-04-1997','DD-MM-YYYY'),'O+','Mangaluru','Self-Employed', 'Married',28000, 7127734594, 'christallobo@gmail.com');
+
+Insert into Step_Perso_Details(PID, Full_name, DOB, Blood_Group, Address, Occupation, Marital_status,Salary, Contact, Email)
+values(seq_perso.nextval,'Akshatha B.',to_date('19-08-1998','DD-MM-YYYY'),'A+','Chennai','Self-Employed', 'Single',20000, 9876543210, 'akshatha2550@gmail.com');
+
+Insert into Step_Perso_Details(PID, Full_name, DOB, Blood_Group, Address, Occupation, Marital_status,Salary, Contact, Email)
+values(seq_perso.nextval,'Pooja',to_date('12-04-1997','DD-MM-YYYY'),'AB+','Mangaluru','Trainee', 'Single',0, 7127734746, 'poo123@gmail.com');
+
+Insert into Step_Perso_Details(PID, Full_name, DOB, Blood_Group, Address, Occupation, Marital_status,Salary, Contact, Email)
+values(seq_perso.nextval,'Sita',to_date('10-08-1998','DD-MM-YYYY'),'O-','Chennai','Trainee', 'Single',0, 9845643210, 'Sita456620@gmail.com');
+
+Insert into Step_Perso_Details(PID, Full_name, DOB, Blood_Group, Address, Occupation, Marital_status,Salary, Contact, Email)
+values(seq_perso.nextval,'Smith',to_date('29-05-1996','DD-MM-YYYY'),'B-','Jharkhand','Trainee', 'Single',0, 9127034895, 'Smith1996@gmail.com');
+
+
+-------------------------------------------------------------------------------------------------------
+
+Create Sequence seq_family
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table Step_Family_Details
+(
+	FId number(5) Constraint Step_Family_Details_FId_PK Primary Key,
+	Relation Varchar2(30),
+	Full_Name Varchar2(30),
+	Age Number(3),
+	Occupation Varchar2(30),
+	PID Number(5),
+	Constraint Step_Family_Details_PID_FK Foreign Key(PID) References Step_Perso_Details(PID)
+);
+
+Insert into Step_Family_Details(FId, Relation, Full_Name, Age, Occupation, PID)
+values(seq_family.nextval, 'Ashoke Kumar Maity','Father', 64, 'Artist', 1);
+
+Insert into Step_Family_Details(FId, Relation, Full_Name, Age, Occupation, PID)
+values(seq_family.nextval, 'Swati Maity', 'Mother', 50, 'HomeMaker', 1);
+
+Insert into Step_Family_Details(FId, Relation, Full_Name, Age, Occupation, PID)
+values(seq_family.nextval, 'John Lobo','Father', 45, 'Business', 2);
+
+Insert into Step_Family_Details(FId, Relation, Full_Name, Age, Occupation, PID)
+values(seq_family.nextval, 'Mary Lob','Mother', 62, 'Doctor', 2);
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+Create Sequence seq_state
+Increment by 1
+Start with 1
+Nocycle
+Nocache;	
+
+
+
+Create Table state
+(
+ 	state_id number(5) constraint state_PK primary key,
+	state_name Varchar2(20)
+);
+
+
+Insert into State(state_id, state_name)
+values(seq_state.nextval, 'Maharastra');
+
+Insert into State(state_id, state_name)
+values(seq_state.nextval, 'West Bengal');
+
+Insert into State(state_id, state_name)
+values(seq_state.nextval, 'Jharkhand');
+
+Insert into State(state_id, state_name)
+values(seq_state.nextval, 'Karnataka');
+
+Insert into State(state_id, state_name)
+values(seq_state.nextval, 'Tamil Nadu');
+
+
+
+Create Sequence seq_city
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+
+Create Table City
+(
+ 	city_id number(5) constraint city_PK primary key,
+	city_name Varchar2(20),
+	sid number(5),
+	Constraint city_SID_FK Foreign Key(SID) References State(state_id)
+);
+
+Insert into City(city_id, city_name,sid)
+values(seq_city.nextval, 'Mahape',1);
+
+Insert into City(city_id, city_name,sid)
+values(seq_city.nextval, 'Airoli',1);
+
+Insert into City(city_id, city_name,sid)
+values(seq_city.nextval, 'Jamshedpur',3);
+
+Insert into City(city_id, city_name,sid)
+values(seq_city.nextval, 'Bankura',2);
+
+Insert into City(city_id, city_name,sid)
+values(seq_city.nextval, 'Mangaluru',4);
+
+
+Create Sequence seq_training
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table Training
+(
+	train_id number(5) constraint trainee_traineeid_PK primary key,
+	course_name varchar2(20) not null,
+	duration number(2) check (duration <=12),
+	start_date date,
+	city_id number(5),
+	Constraint Training_city_ID_FK Foreign Key(city_id) References City(city_id)
+);
+
+
+insert into Training(train_id,course_name,duration,start_date,city_id)
+values(seq_training.nextval,'Agriculture',3,to_date('13-02-2020','DD-MM-YYYY'),1);
+
+insert into Training(train_id,course_name,duration,start_date,city_id)
+values(seq_training.nextval,'Horticulture',3,to_date('23-02-2020','DD-MM-YYYY'),2);
+
+insert into Training(train_id,course_name,duration,start_date,city_id)
+values(seq_training.nextval,'Computer & IT',3,to_date('03-03-2020','DD-MM-YYYY'),3);
+
+insert into Training(train_id,course_name,duration,start_date,city_id)
+values(seq_training.nextval,'Handlooms',3,to_date('09-05-2020','DD-MM-YYYY'),4);
+
+insert into Training(train_id,course_name,duration,start_date,city_id)
+values(seq_training.nextval,'Food Processing',3,to_date('23-12-2020','DD-MM-YYYY'),5);
+
+Create Sequence seq_trainee
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table Trainee
+(
+	trainee_id number(5) constraint trainee_PK primary key,
+	course_opt varchar2(20) not null,
+	start_date date,
+	end_date date,
+	pid number(5),
+	tid number(5),
+	Constraint Trainee_PID_FK Foreign Key(PID) References step_perso_Details(PID),
+	Constraint Trainee_TID_FK Foreign Key(TID) References Training(train_id)
+);
+
+
+Insert into Trainee(trainee_id,course_opt,start_date ,end_date,pid,tid)
+values(seq_trainee.nextval,'Agriculture',to_date('03-02-2020','DD-MM-YYYY'),to_date('31-05-2020','DD-MM-YYYY'),4,1);
+
+
+Insert into Trainee(trainee_id,course_opt,start_date ,end_date,pid,tid)
+values(seq_trainee.nextval,'Horticulture',to_date('13-03-2020','DD-MM-YYYY'),to_date('23-06-2020','DD-MM-YYYY'),5,2);
+
+
+Insert into Trainee(trainee_id,course_opt,start_date ,end_date,pid,tid)
+values(seq_trainee.nextval,'Handloom',to_date('23-04-2020','DD-MM-YYYY'),to_date('31-07-2020','DD-MM-YYYY'),6,4);
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Create Sequence seq_hostel
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+
+Create table Hostel
+(
+	hostel_id number(5) constraint Hostel_PK primary key,
+	hostel_name varchar2(30) not null,
+	bed_avail number(5),
+	cid number(5),
+	Constraint Hostel_cid_FK Foreign Key(CID) References City(city_id)
+);
+	
+insert into Hostel(hostel_id,hostel_name, bed_avail,cid)
+values(seq_hostel.nextval,'Ratan Kunj', 100, 1);
+
+insert into Hostel(hostel_id,hostel_name, bed_avail,cid)
+values(seq_hostel.nextval,'Chrystal Villa', 101, 3);
+
+insert into Hostel(hostel_id,hostel_name, bed_avail,cid)
+values(seq_hostel.nextval,'HBD Lites', 50, 4);
+
+insert into Hostel(hostel_id,hostel_name, bed_avail,cid)
+values(seq_hostel.nextval,'Mother Teresa Homes', 71, 5);
+
+---------------------------------------------------------------------------------------------
+
+Create Sequence seq_doc1
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table Step_Doc
+(
+	doc_id number(5) constraint Step_Doc_PK primary key,
+	doc_upload BLOB,
+	pid number(5),
+	Constraint Step_Doc_FK Foreign Key(PID) References Step_Perso_Details(pid)
+);
+
+Insert into Step_Doc(doc_id, doc_upload,pid)
+values(seq_doc1.nextval, EMPTY_BLOB(),1);
+
+
+****
+CREATE TABLE lob_table (id NUMBER, doc BLOB);
+INSERT INTO lob_table VALUES (1, EMPTY_BLOB()); 
+
+DECLARE
+  src_lob  BFILE := BFILENAME('MY_DIR', '/tmp/me.gif');
+  dest_lob BLOB;
+BEGIN
+  INSERT INTO lob_table VALUES(2, EMPTY_BLOB())
+     RETURNING doc INTO dest_lob;
+
+  DBMS_LOB.OPEN(src_lob, DBMS_LOB.LOB_READONLY);
+  DBMS_LOB.LoadFromFile( DEST_LOB => dest_lob,
+                         SRC_LOB  => src_lob,
+                         AMOUNT   => DBMS_LOB.GETLENGTH(src_lob) );
+  DBMS_LOB.CLOSE(src_lob);
+
+  COMMIT;
+END;
+/
+*****
+*********
+
+Step to Follow :
+
+1. Create a directory object pointing to a physical directory on the database server that the "oracle" user has read/write permissions on.
+CONN / AS SYSDBA
+CREATE OR REPLACE DIRECTORY IMAGES ost/';
+GRANT READ, WRITE ON DIRECTORY images TO db_user_name;
+2. Procedure to Load the BLOB File.
+DECLARE
+  l_dir    VARCHAR2(10) := 'IMAGES'; -------Is the Directory Object Created Above.
+  l_file   VARCHAR2(20) := 'site_logo.gif'; ------ Is the BLOB File that is present in the Directory mentioned.
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO images (id, name, image)
+  VALUES (1,l_file, empty_blob())
+  RETURN image INTO l_blob;
+
+  l_bfile := BFILENAME(l_dir, l_file);
+  DBMS_LOB.fileopen(l_bfile, DBMS_LOB.file_readonly);
+  DBMS_LOB.loadfromfile(l_blob, l_bfile, DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+
+  COMMIT;
+END;
+
+*********
+
+NGO
+
+-----
+Create Sequence seq_ngo
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table NGO_details
+(
+	Ngo_ID number(5) Constraint NGO_details_Ngo_ID_PK Primary Key,
+	Ngo_name Varchar2(30) Not Null,
+	Ngo_head Varchar2(30) Not Null,
+	Ngo_panhead Varchar2(10) Unique,
+	Ngo_gender Varchar2(20) Not Null,
+	Ngo_desig Varchar2(30) Not Null,
+	Ngo_email Varchar2(50) Unique,
+	Ngo_phone Number(10) Unique,
+	Ngo_website Varchar2(50)
+);
+
+
+Insert into NGO_details(Ngo_ID,Ngo_name,Ngo_head,Ngo_panhead,Ngo_gender,Ngo_desig,Ngo_email,Ngo_phone,Ngo_website)
+values(seq_ngo.nextval,'Smile Foundation','Swatantra','ABCDA2341X','Male','Corporate Partner','cp@smilefoundationindia.org','9867212356','www.smilefoundationindia.org');
+
+Insert into NGO_details(Ngo_ID,Ngo_name,Ngo_head,Ngo_panhead,Ngo_gender,Ngo_desig,Ngo_email,Ngo_phone,Ngo_website)
+values(seq_ngo.nextval,'Goonj','Gargi Majumdar','ASDDA7854X','Female','Corporate Head','goonj.org','9645738356','www.goonj.org');
+
+Insert into NGO_details(Ngo_ID,Ngo_name,Ngo_head,Ngo_panhead,Ngo_gender,Ngo_desig,Ngo_email,Ngo_phone,Ngo_website)
+values(seq_ngo.nextval,'Help Age India','Swaraj','ABCDA1092X','Male','Corporate Partner','help.age@india.org','9879345356','www.help.age.org');
+
+
+Insert into NGO_details(Ngo_ID,Ngo_name,Ngo_head,Ngo_panhead,Ngo_gender,Ngo_desig,Ngo_email,Ngo_phone,Ngo_website)
+values(seq_ngo.nextval,'Give Foundation','Bhavesh','ABCDA7865X','Male','Corporate Head','givefoundation@india.org','9908765356','www.givefoundation.org');
+
+Insert into NGO_details(Ngo_ID,Ngo_name,Ngo_head,Ngo_panhead,Ngo_gender,Ngo_desig,Ngo_email,Ngo_phone,Ngo_website)
+values(seq_ngo.nextval,'The Akshaya Patra Foundation','Punit Sahoo','ABCDA3451X','Male','Corporate Partner','akshayapatra@india.org','9809098976','www.akshayapatra.org');
+
+----------------------------------------------------------------------------------------
+Create Sequence seq_addr
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+Create table NGO_addr
+(
+	Ngo_addr_ID number(5) Constraint NGO_addr_PK Primary Key,
+	building_name Varchar2(30) Not Null,
+	street_name Varchar2(30),
+	landmark Varchar2(20),
+	state Varchar2(20) Not Null,
+	district Varchar2(30) Not Null,
+	city Varchar2(30) Not Null,
+	pincode Number(10) Not Null,
+	ngoid number(5),
+	Constraint NGO_addr_FK Foreign Key(ngoid) References Ngo_details(NGO_ID)
+);
+
+Insert into NGO_addr(Ngo_addr_ID,building_name,street_name,landmark,state ,district,city ,pincode ,ngoid )
+values(seq_addr.nextval,' Aradhya Bhavan','BTM layout', 'Silk Board', 'Karnataka', 'Bengaluru','Bengaluru','500713',1);
+
+Insert into NGO_addr(Ngo_addr_ID,building_name,street_name,landmark,state ,district,city ,pincode ,ngoid )
+values(seq_addr.nextval,' Pinkish Villa','KoperKhaine', 'Zaika', 'Maharastra', 'Thane','Navi Mumbai','400710',2);
+
+Insert into NGO_addr(Ngo_addr_ID,building_name,street_name,landmark,state ,district,city ,pincode ,ngoid )
+values(seq_addr.nextval,' Silver Zone','Ghanasoli', 'Ghanasoli Station', 'Thane', 'Bengaluru','Mumbai','400898',3);
+
+Insert into NGO_addr(Ngo_addr_ID,building_name,street_name,landmark,state ,district,city ,pincode ,ngoid )
+values(seq_addr.nextval,' Seawood Corner','Vashi', 'Inorbit Mall', 'Maharastra', 'Thane','Mumbai','400298',4);
+
+------------------------------------------------------------------------
+
+
+Create table NGO_bank
+(
+	Account_no number(20) Constraint NGO_bank_PK Primary Key,
+	Account_holder Varchar2(30) Not Null,
+	bank_name Varchar2(30)Not Null,
+	branch Varchar2(20)Not Null,
+	IFSC_code Varchar2(11) Not Null,
+	ngoid number(5),
+	Constraint NGO_bank_FK Foreign Key(ngoid) References Ngo_details(NGO_ID)
+);
+----------------------------------------------------------------
+
+
+Create table NGO_Project_Incharge
+(
+	Pro_Name varchar2(30) Constraint NGO_Project_Incharge_PK Primary Key,
+	Incharge_name varchar2(30) NOT NULL,
+	In_Email varchar2(30) unique,
+	In_Contact varchar2(10) unique,
+	ngoid number(5),
+	Constraint NGO_Pro_In_FK Foreign Key(ngoid) References Ngo_details(NGO_ID)
+);
+
+--------------------------------------------------------------------------
+Create Sequence seq_doc2
+Increment by 1
+Start with 1
+Nocycle
+Nocache;
+
+
+Create table NGO_Doc
+(
+	doc_id number(5) constraint NGO_Doc_PK primary key,
+	doc_upload BLOB,
+	ngoid number(5),
+	Constraint NGO_Doc_FK Foreign Key(ngoid) References Ngo_details(NGO_ID)
+);
+
+Insert into NGO_Doc(doc_id, doc_upload,ngoid)
+values(seq_doc1.nextval, EMPTY_BLOB(),1);

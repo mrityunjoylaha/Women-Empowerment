@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>STEP Registration for MWCD</title>
+<style type="text/css">
+	
+table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+	
+
+
+</head>
+<body>
+	<form>
+		<h1> REGISTRATION FORM </h1>
+		<table>
+			<h3>PERSONAL DETAILS</h3>
+		<tr>
+			<td><label>Full Name :</label></td>
+			<td><input type="text" id="name" placeholder="Enter your name"></td>
+		</tr>
+		<tr>
+			<td><label>Date of Birth :</label></td>
+			<td><input type="Date" id="dob" placeholder="Enter your Birth Date"></td>
+		</tr>
+		
+		<tr>
+			<td><label>Blood Group :</label></td>
+			<td><select>
+				<option>---select---</option>
+			    <option>A+</option>
+			    <option>A-</option>
+			    <option>B+</option>
+			    <option>B-</option>
+			    <option>O+</option>
+			    <option>O-</option>
+			    <option>AB+</option>
+			    <option>AB-</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label>Address :</label></td>
+			<td><textarea rows="7" cols="50"></textarea>></td>
+		</tr>
+		<tr>
+			<td><label>Marital Status :</label></td>
+			<td><select>
+				<option>---select---</option>
+			    <option>Single</option>
+			    <option>Widowed</option>
+			    <option>Divorced</option>
+			    <option>Separated</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label>Occupation :</label></td>
+			<td><input type="radio" id="r1" name="occ" value="employed">Self-Employed<br/>
+			<input type="radio" id="r1" name="occ" value="trainee">Trainee</td>
+		</tr>
+		
+		<tr>
+			<td><label>Salary :</label></td>
+			<td><select>
+			    <option>Below 5000</option>
+			    <option>5000 to 10000</option>
+			    <option>10000 to 15000</option>
+			    <option>15000 to 20000</option>
+			    <option>20000 to 25000</option>
+			    <option>25000 to 30000</option>
+			    <option>30000 to 35000</option>
+			    <option>35000 to 40000</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label>Contact:</label></td>
+			<td><input type="tel" name="phone" pattern="[0-9]{10}" required></td>
+		</tr>
+		<tr>
+			<td><label>Email:</label></td>
+			<td><input type="Email" name="mail"  required></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="SAVE & SUBMIT" name="b1"  onclick="window.location.href = 'Family.html';"></a></td>
+		</tr>
+	</table>
+
+
