@@ -1,0 +1,254 @@
+<div class="container">
+<form [formGroup]="registerForm" >
+    
+        <h1> REGISTRATION FORM </h1>
+        <h3>PERSONAL DETAILS</h3>
+		<table>
+           
+		<tr>
+			<td><label>Full Name :</label></td>
+			<td><input type="text" id="name" formControlName="fullname"></td>
+		</tr>
+		<tr>
+			<td><label>Date of Birth :</label></td>
+			<td><input type="Date" id="dob" formControlName="birthdate"></td>
+		</tr>
+		
+		<tr>
+			<td><label>Blood Group :</label></td>
+			<td><select>
+				<option>---select---</option>
+			    <option>A+</option>
+			    <option>A-</option>
+			    <option>B+</option>
+			    <option>B-</option>
+			    <option>O+</option>
+			    <option>O-</option>
+			    <option>AB+</option>
+			    <option>AB-</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label>Address :</label></td>
+			<td><textarea rows="7" cols="50"></textarea>></td>
+		</tr>
+		<tr>
+			<td><label>Marital Status :</label></td>
+			<td><select>
+				<option>---select---</option>
+			    <option>Single</option>
+			    <option>Widowed</option>
+			    <option>Divorced</option>
+			    <option>Separated</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+            
+		<tr>
+			<td><label>Contact:</label></td>
+			<td><input type="tel" name="phone" pattern="[0-9]{10}" required></td>
+		</tr>
+		<tr>
+			<td><label>Email:</label></td>
+			<td><input type="Email" name="mail"  required></td>
+        </tr>
+        
+            <!-- <td><label>Occupation :</label></td>
+            <td>  <input type="radio" ng-model="occupation.name" value="employed">
+                Self-Employed<br/>
+                <input type="radio" ng-model="occupation.name" value="trainee">
+                Trainee</td>
+		</tr> -->
+		
+        <tr>
+			<td><label>Occupation :</label></td>
+			<td><input type="radio" id="r1" name="occ" value="employed">Self-Employed<br/>
+			<input type="radio" id="r1" name="occ" >Trainee</td>
+        </tr>
+        
+	</table>
+	
+    <br>
+    <h3>FAMILY DETAILS</h3>
+    <table>
+      
+		
+		<tr >		
+			<th><label>Relation </label></th>		
+			<th><label>Full Name </label></th>		
+			<th><label>Age </label></th>		
+            <th><label>Occupation </label></th>
+            <th></th>
+			
+		</tr>
+		<tr>
+			<td><label>Father</label></td>
+			<td><input type="text" name="Enter full name"  formControlName="father"></td>
+			<td><input type=number name="age" formControlName="age"></td>
+            <td><input type="text" name="Enter occupation"  formControlName="occupation1"></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td><label>Mother</label></td>
+			<td><input type="text" name="Enter full name"  formControlName="mother"></td>
+			<td><input type=number name="age" formControlName="age"></td>
+            <td><input type="text" name="Enter occupation"  formControlName="occupation2"></td>
+            <td></td>
+        </tr>
+
+		<tr>
+			<td><label>Child</label></td>
+			<td><input type="text" name="Enter full name"  formControlName="child"></td>
+            <td><input type=number name="age" formControlName="age"></td>
+            <td><input type="text" name="Enter occupation"  formControlName="occupation3"></td>
+            <td><input type="button" value=ADD></td>
+		</tr>
+        <tr>
+			<td><label>Spouse</label></td>
+			<td><input type="text" name="Enter full name"  formControlName="spouse"></td>
+            <td><input type=number name="age" formControlName="age"></td>
+            <td><input type="text" name="Enter occupation"  formControlName="occupation4"></td>
+            <td></td>
+			
+        </tr>
+        
+    
+    </table>           
+<br>
+<h3>HOSTEL DETAILS</h3>
+<table>
+   
+   <tr>
+        <td>Do you need Hostel facility?</td>
+        <td><input type="radio" name="hostel" value="yes"> Yes<br>
+            <input type="radio" name="hostel" value="no"> No<br></td>
+    </tr>
+
+   
+<tr>
+            <td>State</td>
+            <td><select>
+                <option>---select--</option>
+                <option>Maharastra</option>
+                <option>Jharkhand</option>
+                <option>West Bengal</option>
+                <option>Karnataka</option>
+             
+                </select>
+            </td>
+    </tr>
+
+
+    <tr>
+            <td>City</td>
+            <td><select>
+                <option>---select--</option>
+                <option>Mumbai</option>
+                <option>Jamshedpur</option>
+                <option>Kolkata</option>
+                <option>Bangalore</option>
+              
+                </select>
+            </td>
+    </tr>
+    <tr>
+      <td>Hostel Name</td>
+        <td><select>
+            <option>---select--</option>
+            <option>Rup Narayan</option>
+            <option>Ratan Kunj</option>
+            <option>Shri Lakshmi Homes</option>
+            <option>HDB Homes</option>
+            <option>Elite Villa</option>
+            <option>Swastik Delite</option>
+            <option>SunRiser Homes</option>
+        </select>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>Accomodation Details</td></tr>
+        <tr>
+        <td>Beds Available :
+            <select>
+                <option>---select---</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </td>
+    </tr>
+        
+           
+    
+</table>
+<br>
+<h3>SELF-EMPLOYED WOMEN DETAILS</h3>
+<table>
+   
+    <tr>
+         <td>Company Name </td>
+         <td><input type="text" name="company" formControlName="company"></td>
+     </tr>
+     <tr>
+        <td>Designation </td>
+        <td><input type="text" name="company" formControlName="company"></td>
+    </tr>
+    <tr>
+    <td>Location</td>
+    <td><input type="text" name="location" formControlName="location"></td>
+    </tr>
+        <tr>
+			<td><label>Salary :</label></td>
+			<td><select>
+			    <option>Below 5000</option>
+			    <option>5000 to 10000</option>
+			    <option>10000 to 15000</option>
+			    <option>15000 to 20000</option>
+			    <option>20000 to 25000</option>
+			    <option>25000 to 30000</option>
+			    <option>30000 to 35000</option>
+			    <option>35000 to 40000</option>
+			</select>
+			</td>
+		</tr>
+
+    
+</table>
+<br>
+<h3>TRAINEE DETAILS</h3>
+<table>
+    
+    <tr>
+        <td>Course Opted :</td>
+        <td><select>
+            <option>---select--</option>
+            <option>Agriculture</option>
+            <option>Horticulture</option>
+            <option>Handloom</option>
+            <option>Zari</option>
+            <option>Computer & IT</option>
+        </select>
+    </tr>
+    <tr>
+        <td>Start Date</td>
+        <td><input type="date"></td>
+    </tr>
+    <tr>
+        <td>End Date</td>
+        <td><input type="date"></td>
+    </tr>
+    <tr>
+        <input type="button" class="button" value="SAVE & SUBMIT" >
+    </tr>
+</table>
+</form>
+
+</div>
+
+
