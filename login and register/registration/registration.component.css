@@ -1,0 +1,116 @@
+    form {
+    border: 2px solid black;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  padding: 10px;
+  border-radius: 50px 20px;
+    }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    
+    .title {
+        display: flex;
+        color:black;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+    button {
+    background-color: #4e42f4;
+    color: black;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grab;
+    width: 48%;
+    border: blue;
+    border-radius: 10px;
+    }
+    h1 {
+    text-align:center;
+    font-size:18;
+    }
+    button:hover {
+    opacity: 0.8;
+    background-color:greenyellow;
+    }
+    .formcontainer {
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    }
+    .container {
+    padding: 16px 0;
+    text-align:left;
+    }
+   
+    html, body {
+        min-height: 100%;
+        }
+        body, div, form, input, select, p { 
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 16px;
+        color: black;
+        }
+        /*body {
+        background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+        background-size: cover;
+        }*/
+        h1, h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        }
+        h1{
+        margin: 0 0 0 8px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 25px;
+        background: rgba(9, 153, 236, 0.5); 
+        }
+        .left-part, form {
+        padding: 25px;
+        }
+        .left-part {
+        text-align: center;
+        }
+        
+        form {
+        background: rgb(162, 0, 255);
+        }
+        .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        position: absolute, center;
+        margin-left: 42%;
+       
+        }
+        .info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 430px;
+        margin-right: 430px;
+        }
+        input, select {
+        padding: 5px;
+        margin-bottom: 30px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #eee;
+        }
+      

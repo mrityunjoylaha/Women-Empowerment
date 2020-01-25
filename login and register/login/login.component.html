@@ -1,0 +1,27 @@
+ 
+<!-- <app-step-home></app-step-home> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">-->
+<!-- <link rel="stylesheet" type="text/css" href="style.css">  -->
+
+<body> 
+  <div class="loginbox">
+    <img src="..\assets\pic2.png" class="avatar"> 
+    <h1>LOGIN HERE</h1>
+ 
+<form [formGroup] = "userForm" (ngSubmit) = "onSubmit()">
+  <div class="container">
+  <p><label for="username" >Username</label><br></p>
+<input type="text" formController="username"><br>
+<p><label for="password"  >Password</label><br></p>
+<input type="password"  formController="password"><br>
+</div>
+<input type="submit" value="LOGIN"><br>
+<div>
+  <p>New User?</p><br>
+  <p><a routerLink = "/registration" routerLinkActive="active">Register here</a></p>
+</div>
+
+</form>
+
+</div>
+</body>
