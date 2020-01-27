@@ -1,0 +1,231 @@
+/*Header*/
+
+.div1 a{
+    color: white;
+}
+.div1 a:hover{
+    /* background-color: yellowgreen; */
+    background-color: purple;
+    font-size: 20px;
+    font-style: italic;
+}
+.div1{
+    float: right;
+    color:white;
+}
+nav{
+  margin-top:-10px;
+    background-color: darkslateblue;
+    color: white;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color:darkslateblue; */
+    background-color: darkslateblue;
+    text-align: center;
+    /* padding-top:10px; */
+    color: white;
+  }
+  /* img{
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      padding-bottom:60px;
+    
+      
+  }*/
+  .img1{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-bottom:60px;
+    height: auto;
+    width: auto;
+    max-height: 180px;
+    max-width: 180px;
+    margin-top:-90px;
+  }
+h1{
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-top: 20px;
+    
+}
+ .slider{
+     margin-top: -50px;
+ }
+ .div3{
+     /* margin-top:5px; */
+    float:right;
+    /* padding-right: 0px; */
+}
+
+.jumbotron{
+    float: right;
+    padding: 2px;
+    margin-bottom: 2px;;
+}
+
+.navbar{
+    margin-top: 0px;
+    padding-top: -5px;
+}
+
+.navbar h1{
+    text-shadow: 2px 2px 8px #FF0000;
+    /* font-style:italic ; */
+    font-family:Lobster;
+}
+
+
+
+
+
+
+
+
+
+/*policy css*/
+
+     
+  
+    /* nav{
+        margin-right:-20px;
+        height: 20px;
+        opacity: 50%;
+    } */
+    td{
+        color:black;
+    }
+    /* body {
+        background: url('C:\Users\lntinfotech\Downloads\women-empowerment-final (1)\women-empowerment-final\src\assets\policy.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      } */
+      
+      /* body{
+          background-attachment: fixed;
+      } */
+    .p1, .p2, .p3 , .p4 {
+       
+        padding-left: 20px;
+        padding-right: 20px;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+        float: right;
+        text-align: justify;    
+    }
+
+    .para{
+        margin-left:5px;
+        /* background-color:blanchedalmond; */
+        background-color:rgb(120, 167, 211);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: justify;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border: 1px solid;
+        /* padding: 10px; */
+        box-shadow: 5px 10px 8px #888888;
+        /* box-shadow: ; */
+    }
+
+    /* .p4{
+        /* border:1px double palevioletred; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(114, 79, 148);
+    
+    } */
+    body{
+        /* background-color: rgb(166, 120, 212); */
+        /* background-color: blanchedalmond; */
+    }
+    .para1{
+        margin-left: 5px;
+        text-align: justify;
+        padding: 0px 10px;
+    }
+    h3{
+        padding-left: 15px;
+        padding-top: 30px;
+    }
+    
+    .bullet
+    {
+        padding-left: 5px;
+    }
+
+
+    .policy{
+        
+        margin-top: 10px;
+    }
+
+    .head{
+        margin-top: 120px;
+        position: relative;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom:-20px;
+        background-color:rgb(141, 107, 204);
+        padding-right: 10px;
+        color:black;
+        padding-bottom: 1px;
+    }
+    .head h2{
+      margin-left: 10px;
+    }
+    
+    .box1{
+        /* border: 1px double;
+        box-shadow: 5px 10px 8px #888888; */
+        float:left;  
+        background-color: beige; 
+        width:31%; 
+        border-radius: 10px;
+        display:inline-block;
+        margin-right: 22px;
+        margin-left: 15px;
+        height:370px;
+        padding: 15px 15px 15px 15px;
+        text-align: justify;
+        box-shadow: 5px 10px 8px #888888;
+    }
+    .box2{
+        /* border: 1px double;
+        box-shadow: 5px 10px 8px #888888; */
+        float:left;  
+        background-color: beige; 
+        width:33%;  
+        border-radius: 10px;
+        margin-right:15px;
+        display:inline-block;
+        height:370px;
+        padding: 15px 15px 15px 15px;
+        text-align: justify;
+        box-shadow: 5px 10px 8px #888888;
+    }
+    .box3{
+        /* border: 1px double;
+        box-shadow: 5px 10px 8px #888888; */
+        float:right; 
+        background:beige;
+        width:31%; 
+        border-radius: 10px;
+        display:inline-block;
+        margin-right: 10px;
+        height:370px;
+        padding: 15px 15px 15px 15px;
+        text-align: justify;
+        box-shadow: 5px 10px 8px #888888;
+    }
+    .box{
+        padding-bottom: 30px;
+    }
