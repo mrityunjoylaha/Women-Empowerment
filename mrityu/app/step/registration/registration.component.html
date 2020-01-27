@@ -1,0 +1,49 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Step registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body> -->
+
+
+  <h1>Personal-Details</h1>
+<div id="form">
+  <form [formGroup]="addForm" (ngSubmit)="addCustomer()">
+    <div class="div1">
+  <label>Name</label><br>
+  <input type="text"  size="35" formControlName="name" name="customerName"><br><br>
+
+ 
+  <label>Username</label><br>
+  <input type="text" size="35" formControlName="userName" name="username"><br><br>
+
+  <label>Password</label><br>
+  <input type="password" size="35" formControlName="password" name="password"><br><br>
+  
+  <label>Confirm Password</label><br>
+  <input type="password" size="35" formControlName="cPassword" name="cpassword"><br><br>
+  
+
+  <label>Mobile</label><br>
+  <input type="number" size="35" formControlName="contact" name="phoneNo"><br><br>
+
+  <label for="date">Date of Birth:</label>
+  <input type="date" class="form-control" formControlName="dob" id="date">
+  <div *ngIf="submitted && loginForm.controls.date.errors" class="error">
+    <div class="text-danger" *ngIf="loginForm.controls.date.errors.required">Username is required</div>
+  </div>
+  <br><br>
+  <button class="button"  (click)="onClick()">Submit Details</button>
+</div>
+  </form>
+  </div>
+
+
+
+
+
+
+

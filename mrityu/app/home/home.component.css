@@ -1,0 +1,14 @@
+/* h1{
+    background-color: brown;
+    padding-left: 20px;
+    padding-bottom: 20px;
+} */
+a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+.div3{
+    float:right;
+    /* padding-right: 0px; */
+}

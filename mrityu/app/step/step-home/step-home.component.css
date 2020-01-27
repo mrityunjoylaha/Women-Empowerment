@@ -1,0 +1,41 @@
+.div1{
+    background-color: brown;
+    color: white;
+    margin-top: -18px;
+    margin-left:-9px;
+    margin-right:-9px;
+
+    padding-bottom: 0px;
+    padding-top: 1px;
+
+    /* padding-left: 0px; */
+    border-radius: 10px;
+}
+.div2 h1{
+    background-color: brown;
+    color: white;
+    text-align: center;
+    margin-top: -85px;
+    margin-left: -9px;
+    margin-right: -9px ;
+    padding: 20px 0px 2px 0px;
+     
+}
+ .div2{
+   margin-top: -10px;
+
+} 
+ul li{
+    display: inline;
+    padding: 59px;
+    font-size: 18px;
+}
+footer{
+    margin-top: 270px;
+    margin-left: 475px;
+}
+.logo{
+    
+    max-width: 4%;
+    max-height: 1%;
+}
