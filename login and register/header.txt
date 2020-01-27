@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-light bg-light navbar-fixed-top">
+    
+        <h1 style="text-align: center;">MINISTRY OF WOMEN & CHILD DEVELOPMENT</h1>
+        <a class="navbar-brand" href="#">
+        <img src="assets\wm3.png" height="200" width="200" style="margin-bottom: 500px;" class="img1"></a>
+        <div class="div1">
+
+            <a class="navbar-brand" routerLink="/home2" routerLinkActive="active">HOME</a>
+            <a class="navbar-brand" routerLink="/contact-us" routerLinkActive="active">CONTACT US</a>
+        </div>
+    </nav>
+    <div class="slider">
+        <img src="assets\image1.jpg" alt="" />
+        <img src="assets\image2.jpeg" alt="" />
+        <img src="assets\image5.jpg" alt="" />
+        <img src="assets\image4.jpg" alt="" />
+    </div>
