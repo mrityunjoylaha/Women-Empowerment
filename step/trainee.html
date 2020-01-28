@@ -1,0 +1,99 @@
+<div class="container">
+<form [formGroup]="registerForm" >
+    
+        <h1> REGISTRATION FORM FOR SELF-EMPLOYED WOMEN </h1>
+		<table>
+           
+		<tr>
+			<td><label>Full Name :</label></td>
+			<td><input type="text" id="name" formControlName="fullName"></td>
+		</tr>
+		<tr>
+			<td><label>Date of Birth :</label></td>
+			<td><input type="Date" id="dob" formControlName="dob"></td>
+		</tr>
+		<tr>
+			<td><label>Relation :</label></td>
+			<td><input type="text" id="relation" formControlName="relation"></td>
+		</tr>
+		<tr>
+			<td><label>Father Name/ Mother Name / Spouse Name :</label></td>
+			<td><input type="text" id="family" formControlName="familyName"></td>
+		</tr>
+		<tr>
+			<td><label>Marital Status :</label></td>
+			<td><select>
+				<option>---select---</option>
+			    <option>Single</option>
+			    <option>Widowed</option>
+			    <option>Divorced</option>
+			    <option>Separated</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+		
+		<tr>
+			<td><label>Address :</label></td>
+			<td><textarea rows="7" cols="50" formControlName="address"></textarea></td>
+		</tr>
+		
+		
+		
+		
+		
+            
+		<tr>
+			<td><label>Contact:</label></td>
+			<td><input type="tel" name="phone" pattern="[0-9]{10}" formControlName="contact" required></td>
+		</tr>
+		
+		
+		<tr>
+			<td><label>Course:</label></td>
+			<td><select>
+				<option>---select---</option>
+			    <option>Handloom</option>
+			    <option>Stitching</option>
+			    <option>Agriculture</option>
+			    <option>Tailoring</option>
+				 <option>IT training</option>
+			</select></td>
+		</tr>
+		
+		
+		
+		
+	<tr>
+        <td>Do you need Hostel facility?</td>
+        <td><input type="radio" name="hostel" value="yes"> Yes<br>
+            <input type="radio" name="hostel" value="no"> No<br></td>
+    </tr>
+	<tr>
+      <td>Hostel Name</td>
+        <td><select>
+            <option>---select--</option>
+            <option> Mother Teresa Homes</option>
+            <option> Bhanudas Plaza</option>
+            
+        </select>
+        </td>
+    </tr>	
+        
+	<tr>
+	<td>Hostel Location</td>
+	<td><input type="text" id="location" formControlName="hostelLocation">  </td>
+	</tr>
+	
+	<tr>
+	<td>No of Bed Required</td>
+	<td><input type="number" id="beds" formControlName="noOfBedsAvailable">  </td>
+	</tr>
+	
+	<tr>
+	<td><input type="submit"  value="REGISTER"></td></tr>
+	
+</table>
+</form>
+
+</div>
